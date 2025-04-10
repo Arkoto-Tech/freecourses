@@ -1697,7 +1697,7 @@ const courses = [
         provider: "Peter Thiel, Stanford",
         category: "Entrepreneurship",
         format: "Lecture Notes",
-        links: [{ type: "materials", url: "https://blakemasters.com/peter-thiels-cs183-startup" }],
+        links: [{ type: "materials", url: "https://www.openculture.com/2014/10/peter-thiels-stanford-course-on-startups-read-the-lectures-notes-free-online.html" }],
         description: "Peter Thiel's Stanford course on startups and entrepreneurship."
     },
     {
