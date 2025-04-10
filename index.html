@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free CS Courses Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Free Computer Science Courses</h1>
+            <p class="subtitle">A curated collection of the best free computer science courses available online</p>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search courses...">
+                <div class="filter-container">
+                    <button id="filter-button">Filter <span class="arrow">▼</span></button>
+                    <div class="filter-dropdown">
+                        <div class="filter-section">
+                            <h3>Categories</h3>
+                            <div id="category-filters"></div>
+                        </div>
+                        <div class="filter-section">
+                            <h3>Sources</h3>
+                            <div id="source-filters"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="stats-container">
+            <div class="stat">
+                <span id="course-count">0</span>
+                <span>Courses</span>
+            </div>
+            <div class="stat">
+                <span id="university-count">0</span>
+                <span>Universities</span>
+            </div>
+            <div class="stat">
+                <span id="category-count">0</span>
+                <span>Categories</span>
+            </div>
+        </div>
+
+        <div class="courses-container">
+            <div id="courses-grid"></div>
+            <div id="no-results" class="hidden">
+                <svg width="100" height="100" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    <path fill="currentColor" d="M6.11 15.89L9.5 12.5 6.11 9.11 4.7 10.53 7.07 12.9 4.7 15.27z"/>
+                </svg>
+                <h2>No matching courses found</h2>
+                <p>Try adjusting your search or filters</p>
+                <button id="reset-search" class="button">Reset Search</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="course-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>This website is a collection of free computer science courses available online. All courses are hosted by their respective providers.</p>
+            <p>&copy; 2023 Free CS Courses Catalog</p>
+        </div>
+    </footer>
+
+    <script src="courses.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
